@@ -1,0 +1,27 @@
+[project]
+name = "freshservice-sdk"
+version = "0.1.0"
+description = "An unofficial Freshservice SDK"
+readme = "README.md"
+license = { file = "LICENSE.md" }
+authors = [
+    { name = "Joshua Winters-Brown", email = "joshuawintersbrown@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = ["requests"]
+
+[project.urls]
+Homepage = "https://github.com/ofgrenudo/freshservice-sdk"
+
+[build-system]
+requires = ["uv_build>=0.11.23,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "freshservice"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
