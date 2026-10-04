@@ -8,7 +8,9 @@ authors = [
     { name = "Joshua Winters-Brown", email = "joshuawintersbrown@gmail.com" }
 ]
 requires-python = ">=3.10"
-dependencies = ["requests"]
+dependencies = [
+    "httpx>=0.28.1",
+]
 
 [project.urls]
 Homepage = "https://github.com/ofgrenudo/freshservice-sdk"
@@ -21,7 +23,7 @@ build-backend = "uv_build"
 module-name = "freshservice"
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.6"]
+dev = ["pytest>=8", "ruff>=0.6", "typos>=1.24"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
